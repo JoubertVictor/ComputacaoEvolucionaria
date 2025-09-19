@@ -22,7 +22,7 @@ def criar_individuo():
 
     individuo = []
     for _ in range(num_itens):
-        # rand < 0.5 => 1, else 0 (metade-metade em média)
+        # rand < 0.5 => 1, else 0 
         if random.random() < 0.5:
             individuo.append(1)
         else:
@@ -58,8 +58,7 @@ def selecao_torneio(populacao):
     for _ in range(torneio_k):
         candidato = random.choice(populacao)   # seleciona um indivíduo aleatório
         if melhor is None or fitness(candidato) > fitness(melhor):
-            # fazemos cópia quando guardamos como 'melhor' para evitar aliasing
-            melhor = candidato[:]  # cópia rasa é suficiente (lista de ints)
+            melhor = candidato[:]  
     return melhor
 
 def crossover_um_ponto(pai1, pai2):
