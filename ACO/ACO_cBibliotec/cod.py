@@ -4,7 +4,7 @@ from pants.solver import Solver
 from pants.world import World
 
 #Mudar aqui para o seu caminho
-EXCEL_FILE = "/home/joubert/ComputacaoEvolucionaria/ACO_cBibliotec/DadosAtividadesACO.xlsx"
+EXCEL_FILE = "./DadosAtividadesACO.xlsx"
 
 def ler_matriz_custo(file_name=EXCEL_FILE):
     df = pd.read_excel(file_name, sheet_name=0, header=None)
